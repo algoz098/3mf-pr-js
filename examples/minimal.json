@@ -1,0 +1,23 @@
+{
+  "unit": "millimeter",
+  "lang": "en-US",
+  "metadata": {
+    "Title": "Exemplo Minimal",
+    "Application": "3mf-pr-js"
+  },
+  "basematerials": [
+    { "name": "PLA Branco", "displaycolor": "#FFFFFFFF" }
+  ],
+  "objects": [
+    {
+      "type": "mesh",
+      "name": "Triângulo",
+      "vertices": [[0,0,0],[10,0,0],[0,10,0]],
+      "triangles": [[0,1,2]],
+      "materialIndex": 0
+    }
+  ],
+  "build": [
+    { "objectIndex": 0, "transform": [1,0,0, 0,1,0, 0,0,1, 0,0,0] }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "unit": "millimeter",
+  "lang": "en-US",
+  "production": true,
+  "metadata": {
+    "Title": "Complex Assembly Example",
+    "Designer": "3mf-pr-js",
+    "Description": "Multi-object scene with materials and transforms"
+  },
+  "basematerials": [
+    { "name": "PLA Red", "displaycolor": "#FF0000FF" },
+    { "name": "PLA Blue", "displaycolor": "#0000FFFF" },
+    { "name": "PLA Green", "displaycolor": "#00FF00FF" },
+    { "name": "PLA Yellow", "displaycolor": "#FFFF00FF" }
+  ],
+  "objects": [
+    {
+      "type": "mesh",
+      "name": "Base Cube",
+      "vertices": [
+        [0, 0, 0], [10, 0, 0], [10, 10, 0], [0, 10, 0],
+        [0, 0, 10], [10, 0, 10], [10, 10, 10], [0, 10, 10]
+      ],
+      "triangles": [
+        [0, 1, 2], [0, 2, 3],
+        [4, 6, 5], [4, 7, 6],
+        [0, 5, 1], [0, 4, 5],
+        [1, 6, 2], [1, 5, 6],
+        [2, 7, 3], [2, 6, 7],
+        [3, 4, 0], [3, 7, 4]
+      ],
+      "materialIndex": 0
+    },
+    {
+      "type": "mesh",
+      "name": "Top Pyramid",
+      "vertices": [
+        [2, 2, 10], [8, 2, 10], [8, 8, 10], [2, 8, 10],
+        [5, 5, 15]
+      ],
+      "triangles": [
+        [0, 2, 1], [0, 3, 2],
+        [0, 1, 4],
+        [1, 2, 4],
+        [2, 3, 4],
+        [3, 0, 4]
+      ],
+      "materialIndex": 1
+    },
+    {
+      "type": "mesh",
+      "name": "Side Cylinder (simplified)",
+      "vertices": [
+        [15, 5, 0], [18, 5, 0], [16.5, 6.73, 0], [16.5, 3.27, 0],
+        [15, 5, 10], [18, 5, 10], [16.5, 6.73, 10], [16.5, 3.27, 10]
+      ],
+      "triangles": [
+        [0, 1, 2], [0, 2, 3],
+        [4, 6, 5], [4, 7, 6],
+        [0, 5, 1], [0, 4, 5],
+        [1, 6, 2], [1, 5, 6],
+        [2, 7, 3], [2, 6, 7],
+        [3, 4, 0], [3, 7, 4]
+      ],
+      "materialIndex": 2
+    },
+    {
+      "type": "components",
+      "name": "Assembly Group",
+      "components": [
+        { "objectIndex": 0 },
+        { "objectIndex": 1 },
+        { "objectIndex": 2 }
+      ]
+    }
+  ],
+  "build": [
+    {
+      "objectIndex": 3,
+      "transform": [1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 50, 0]
+    }
+  ]
+}

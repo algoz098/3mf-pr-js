@@ -1,0 +1,45 @@
+{
+  "name": "3mf-pr-js",
+  "version": "0.1.0",
+  "description": "Biblioteca em TypeScript para geração de arquivos 3MF (3D Manufacturing Format)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./generator": {
+      "types": "./dist/generator.d.ts",
+      "default": "./dist/generator.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "dev:test": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@tensorgrad/lib3mf": "^0.1.11",
+    "ajv": "^8.17.1",
+    "jszip": "^3.10.1",
+    "uuid": "^9.0.1",
+    "xmlbuilder2": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/uuid": "^9.0.7",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.6.3",
+    "vitest": "^1.6.0"
+  }
+}
