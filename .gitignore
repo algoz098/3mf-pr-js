@@ -1,0 +1,9 @@
+
+node_modules/
+dist/
+out-*.3mf
+.vite/
+test-results/
+coverage/
+*.log
+.DS_Store
