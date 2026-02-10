@@ -16,3 +16,7 @@ export {
   trianglesToTypedArray,
   typedArrayToTriangles,
 } from './geometry-utils.js';
+export { inspect3MF } from './inspection.js';
+export type { InspectionResult } from './inspection.js';
+export { ThreeMFReader } from './reader.js';
+export type { ReaderOptions } from './reader.js';
